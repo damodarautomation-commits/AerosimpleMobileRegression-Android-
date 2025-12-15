@@ -1,0 +1,123 @@
+/**
+ * ============================================================
+ * Project Framework Summary – Aerosimple Mobile Automation
+ * ============================================================
+ *
+ * Project Name:
+ *  - Aerosimple Mobile App Regression Automation
+ *
+ * ------------------------------------------------------------
+ * Programming Language
+ * ------------------------------------------------------------
+ *  - JavaScript (ES6 / ES Modules)
+ *  - async / await syntax
+ *
+ * ------------------------------------------------------------
+ * Automation Framework
+ * ------------------------------------------------------------
+ *  - WebdriverIO (WDIO v9)
+ *    • Used as test runner
+ *    • Manages sessions, execution, reporting
+ *
+ * ------------------------------------------------------------
+ * Mobile Automation Tool
+ * ------------------------------------------------------------
+ *  - Appium 2
+ *  - Android automation backend: UiAutomator2
+ *
+ * ------------------------------------------------------------
+ * Test Framework
+ * ------------------------------------------------------------
+ *  - Mocha (BDD style)
+ *    • describe()
+ *    • it()
+ *
+ * ------------------------------------------------------------
+ * Design Pattern
+ * ------------------------------------------------------------
+ *  - Page Object Model (POM)
+ *    • Test logic separated from UI interaction logic
+ *    • Improves maintainability and reusability
+ *
+ * ------------------------------------------------------------
+ * Platform & Device
+ * ------------------------------------------------------------
+ *  - Android platform
+ *  - Android Emulator
+ *  - Device connection via ADB
+ *
+ * ------------------------------------------------------------
+ * Application Type
+ * ------------------------------------------------------------
+ *  - Hybrid Mobile Application
+ *    • Native container
+ *    • WebView support (to be automated next)
+ *
+ * ------------------------------------------------------------
+ * Configuration Management
+ * ------------------------------------------------------------
+ *  - wdio.conf.js
+ *    • Desired capabilities
+ *    • App package & activity
+ *    • Timeouts
+ *    • Runner configuration
+ *
+ * ------------------------------------------------------------
+ * Dependency Management
+ * ------------------------------------------------------------
+ *  - Node.js
+ *  - npm
+ *  - package.json
+ *
+ * ------------------------------------------------------------
+ * Test Execution
+ * ------------------------------------------------------------
+ *  - Command:
+ *      npm run wdio
+ *
+ * ------------------------------------------------------------
+ * Reporting
+ * ------------------------------------------------------------
+ *  - WDIO Spec Reporter
+ *    • Console-based execution results
+ *
+ * ------------------------------------------------------------
+ * Key Technical Concepts Used
+ * ------------------------------------------------------------
+ *  - Desired Capabilities
+ *  - Appium Session Lifecycle
+ *  - noReset strategy
+ *  - Emulator-based execution
+ *  - Capability-based app launching
+ *
+ * ------------------------------------------------------------
+ * Project Structure
+ * ------------------------------------------------------------
+ *  Aerosimple_MobileApp_Regression
+ *   ├── package.json
+ *   ├── wdio.conf.js
+ *   └── test
+ *       ├── specs
+ *       │   └── login.js
+ *       └── pageobjects
+ *           └── login.page.js
+ *
+ * ------------------------------------------------------------
+ * Interview Summary (One Line)
+ * ------------------------------------------------------------
+ *  "Built a mobile automation framework using JavaScript,
+ *   WebdriverIO, and Appium for Android following the
+ *   Page Object Model with Mocha test framework."
+ *
+ * ============================================================
+ */
+
+export const frameworkSummary = {
+  language: 'JavaScript',
+  framework: 'WebdriverIO',
+  mobileTool: 'Appium',
+  testFramework: 'Mocha',
+  designPattern: 'Page Object Model',
+  platform: 'Android',
+  appType: 'Hybrid'
+};

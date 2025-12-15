@@ -1,0 +1,140 @@
+/**
+ * =========================================================
+ * REAL ANDROID DEVICE (Moto G71 5G) – ADB & APPIUM CHECKLIST
+ * =========================================================
+ *
+ * Purpose:
+ * This file is a ONE-STOP checklist to ensure a real Android
+ * device is properly connected for Appium / WDIO automation.
+ *
+ * Device:
+ * Moto G71 5G (Motorola)
+ *
+ * =========================================================
+ */
+
+/* =========================================================
+   1. PHONE-SIDE SETTINGS (MANDATORY)
+   ========================================================= */
+
+/**
+ * Developer Options:
+ * Settings → About phone → Tap "Build number" 7 times
+ *
+ * Enable ALL below:
+ *
+ * 1. USB debugging → ON
+ * 2. Install via USB → ON
+ * 3. Stay awake → ON
+ * 4. Default USB configuration → File Transfer
+ *
+ * When prompted:
+ * "Allow USB debugging?" → ALLOW → Always allow
+ */
+
+/* =========================================================
+   2. USB CONNECTION SETTINGS (VERY IMPORTANT)
+   ========================================================= */
+
+/**
+ * On phone USB popup:
+ *
+ * USB controlled by  → This device
+ * Use USB for        → File Transfer (MTP)
+ *
+ * Do NOT select "Charging only"
+ */
+
+/* =========================================================
+   3. WINDOWS REQUIREMENTS
+   ========================================================= */
+
+/**
+ * ✔ Install Motorola USB Driver (MANDATORY on Windows)
+ * URL:
+ * https://motorola-global-portal.custhelp.com/app/answers/detail/a_id/88481
+ *
+ * After install:
+ * - Restart PC
+ * - Reconnect phone
+ */
+
+/* =========================================================
+   4. ADB COMMANDS (RUN IN TERMINAL)
+   ========================================================= */
+
+/**
+ * Kill and restart ADB:
+ *
+ * adb kill-server
+ * adb start-server
+ * adb devices
+ *
+ * Expected output:
+ * ZD2225JHNC   device
+ *
+ * (unauthorized is OK initially – allow on phone)
+ */
+
+/* =========================================================
+   5. IF DEVICE NOT SHOWING
+   ========================================================= */
+
+/**
+ * Troubleshooting checklist:
+ *
+ * ✔ Change USB cable (data cable, not charging-only)
+ * ✔ Try another USB port
+ * ✔ Unlock phone screen
+ * ✔ Revoke USB debugging authorizations
+ * ✔ Toggle USB debugging OFF → ON
+ */
+
+/* =========================================================
+   6. OPTIONAL: DISCONNECT EMULATOR
+   ========================================================= */
+
+/**
+ * If emulator is connected and you want ONLY real device:
+ *
+ * adb -s emulator-5554 emu kill
+ *
+ * Then verify:
+ * adb devices
+ */
+
+/* =========================================================
+   7. APPIUM / WDIO CONFIG (MANDATORY)
+   ========================================================= */
+
+/**
+ * Always set UDID when real device is connected:
+ *
+ * capabilities: [{
+ *   platformName: 'Android',
+ *   'appium:deviceName': 'ZD2225JHNC',
+ *   'appium:udid': 'ZD2225JHNC',
+ *   'appium:automationName': 'UiAutomator2',
+ *   'appium:noReset': true
+ * }]
+ */
+
+/* =========================================================
+   8. FINAL SUCCESS CONDITION
+   ========================================================= */
+
+/**
+ * This command MUST show your real device:
+ *
+ * adb devices
+ *
+ * Output:
+ * ZD2225JHNC   device
+ *
+ * Only after this → start Appium & WDIO
+ */
+
+/**
+ * END OF CHECKLIST
+ * =========================================================
+ */

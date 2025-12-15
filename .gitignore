@@ -1,0 +1,20 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# WDIO / Appium
+allure-results/
+allure-report/
+reports/
+screenshots/
+
+# Generated files
+*.pdf
+*.json
+mobile_report_history.json
+
+# Environment
+.env
+
+# OS
+.DS_Store
